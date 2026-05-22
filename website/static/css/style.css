@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    background-color: #ffffff;
+    color: #0066ff;
+}
+
+/* h1'in normal hali */
+h1 {
+    color: #1100ff73;
+    font-size: 24px;
+    font-family: Georgia, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: 0.3s;
+}
+
+/* h1 üzerine gelince animasyon başlar */
+h1:hover {
+    animation: color-change 3s infinite;
+    cursor: pointer;
+}
+
+/* h4'ün normal hali */
+h4 {
+    color: #000000;
+    font-size: 18px; /* 24px çok büyüktü, biraz küçülttük */
+    font-style: italic;
+    transition: 0.3s;
+}
+
+
+@keyframes color-change {
+  0%   { color: rgb(0, 26, 255); }
+  50%  { color: rgb(255, 0, 0); }
+  100% { color: rgb(38, 0, 255); }
+}
+/* Liste içindeki h3 başlıkları (ör: Sosyal medya ve mesajlaşma) */
+ul h3 {
+    font-size: 28px;      /* Boyutu büyütür */
+    font-weight: bold;    /* Kalın yapar */
+    margin-bottom: 5px;   /* Altındaki metinle arayı açar */
+}
+
+/* Liste içindeki h4 başlıkları (ör: Akıllı telefonlar ve tabletler) */
+ul h4 {
+    font-size: 22px;      /* h3'ten biraz daha küçük ama normalden büyük */
+    font-weight: 800;     /* Daha ekstra kalınlık (900'e kadar çıkabilir) */
+    color: #333;          /* Okunabilirliği artırmak için koyu gri */
+}
+img:hover {
+    transform: scale(1.05); /* Görseli %5 oranında büyütür */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Altına hafif bir gölge ekler */
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teknoloji Bağımlılığından Kurtul!</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <a href="/bilgiler">Rastgele bir gerçeği görüntüle!</a>
+    <a href="/resim">Rastgele bir resim goruntule!</a>
+    <a href="/bilmece">Bir bilmece goruntule!</a>
+</head>
+<body>
+    <h1>Teknoloji Bağımlılığı Nedir?</h1>
+    <p>Teknoloji bağımlılığı, bireyin dijital cihazları, interneti veya sosyal medyayı kontrolsüz, aşırı ve hayatını olumsuz etkileyecek düzeyde kullanmasıdır.</p>
+    
+    <h2>Bu Bağımlılığın Etkileri Nelerdir?</h2>
+    <p>Sosyal soyutlanma, uyku bozuklukları, fiziksel rahatsızlıklar (boyun/göz ağrısı) ve akademik/iş başarısında düşüş...</p>
+    
+    <h3>Teknoloji Bağımlılığın Türleri</h3>
+    <ul>
+        <li>
+            <h3>Sosyal medya ve mesajlaşma</h3>
+            <p>İnsanlar sosyal medyada ve mesajlaşma uygulamalarında çok fazla zaman harcayarak gerçek dünyada geçirdikleri zamanı azaltabilirler.</p>
+        </li>
+
+        <li>
+            <h4>Akıllı telefonlar ve tabletler</h4>
+            <h4><strong>Akıllı telefonlar ve tabletler insanlar için dünyayla iletişim kurmanın temel yolu haline gelebilir...</strong></h4>
+        </li>
+
+        <li>
+            <strong>Çevrimiçi Eğlence</strong>
+            <h4>Oyunlar ve çevrimiçi eğlence bağımlılık yapabilir...</h4>
+        </li>
+
+        <li>
+            <strong>İnternet alışverişi</strong>
+            <h4>İnsanlar duygusal ihtiyaçlarını karşılamak için çevrimiçi alışverişe bağımlı hale gelebilirler.</h4>
+        </li>
+    </ul>
+        <div id="quote-box" style="padding: 20px; border-left: 5px solid #1100ff73; background: #f9f9f9; margin: 20px 0; font-style: italic;">
+    <p id="quote-text">Yükleniyor...</p>
+    <strong id="quote-author"></strong>
+</div>
+
+    <img src="tech.jpg" alt="Image1">
+     <iframe src="https://www.meteoblue.com/tr/hava/widget/daily/?geoloc=detect&days=7&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&coloured=coloured&pictoicon=1&maxtemperature=1&mintemperature=1&windspeed=1&windgust=0&winddirection=1&uv=0&humidity=0&precipitation=1&precipitationprobability=1&spot=1&pressure=0&layout=light&user_key=5e8a0f6055a8b80f&embed_key=4604c6f6375bb990&sig=b526994dae9fb52aa0a26d9c6cd23bb472b74f09fdc92c0009401fae459109ec" frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 360px;height: 349px;border: 0;overflow: hidden;"></iframe><div><!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/tr/hava/hafta/index" target="_blank" rel="noopener">meteoblue</a></div>
+
+    <script>
+    fetch('https://quotable.io')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('quote-text').innerText = `"${data.content}"`;
+            document.getElementById('quote-author').innerText = `- ${data.author}`;
+        })
+        .catch(err => {
+            document.getElementById('quote-text').innerText = "Ekranı kapat ve biraz nefes al.";
+        });
+</script>
+
+    </body>
+</html>
